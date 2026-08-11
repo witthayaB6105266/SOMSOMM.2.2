@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Calamondin Pot - Pitching Deck (6 Groups)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+    
+    :root {
+      --primary: #f97316;
+      --primary-dark: #ea580c;
+      --secondary: #16a34a;
+      --dark: #1e293b;
+      --light: #f8fafc;
+    }
+
+    body, .reveal {
+      font-family: 'Kanit', sans-serif !important;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: 'Kanit', sans-serif !important;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .reveal h2 {
+      color: var(--primary-dark);
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.5em;
+      font-weight: 600;
+      background: var(--secondary);
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--primary);
+    }
+
+    .card.green {
+      border-left-color: var(--secondary);
+    }
+
+    .card h4 {
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    .card ul {
+      font-size: 0.7em;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .card p {
+      font-size: 0.75em;
+      margin: 5px 0;
+    }
+
+    .highlight-box {
+      background: #ffedd5;
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      padding: 15px;
+      font-size: 0.7em;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .price-tag {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .navigation-bar {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 99;
+      display: flex;
+      gap: 5px;
+      background: rgba(255,255,255,0.9);
+      padding: 5px 10px;
+      border-radius: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-btn {
+      border: none;
+      background: transparent;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-family: 'Kanit', sans-serif;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar for Jump to Groups -->
+  <div class="navigation-bar">
+    <button class="nav-btn" onclick="Reveal.slide(0)">หน้าแรก</button>
+    <button class="nav-btn" onclick="Reveal.slide(1)">กลุ่ม 1</button>
+    <button class="nav-btn" onclick="Reveal.slide(7)">กลุ่ม 2</button>
+    <button class="nav-btn" onclick="Reveal.slide(13)">กลุ่ม 3</button>
+    <button class="nav-btn" onclick="Reveal.slide(19)">กลุ่ม 4</button>
+    <button class="nav-btn" onclick="Reveal.slide(25)">กลุ่ม 5</button>
+    <button class="nav-btn" onclick="Reveal.slide(31)">กลุ่ม 6</button>
+  </div>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ==================== MAIN COVER ==================== -->
+      <section>
+        <span class="badge">การแข่งขันนวัตกรรมนักเรียน</span>
+        <h1 style="font-size: 2em; color: var(--primary-dark);">Smart Calamondin Pot</h1>
+        <h3 style="font-size: 1.2em; color: #64748b;">นวัตกรรมกระถางส้มจี๊ดอัจฉริยะด้วยเทคโนโลยี IoT</h3>
+        <p style="font-size: 0.8em; margin-top: 30px;">กระถางขนาด 30 cm | บอร์ดประมวลผล ESP32 | งบประมาณ 2,000 บาท</p>
+        <p style="font-size: 0.6em; color: #94a3b8;">กดปุ่มด้านบนหรือใช้ปุ่มลูกศรเพื่อเลือกกลุ่มนำเสนอ</p>
+      </section>
+
+      <!-- ==================== GROUP 1 ==================== -->
+      <section>
+        <section>
+          <span class="badge">กลุ่มที่ 1</span>
+          <h2>ส้มจี๊ดเจ้าอารมณ์</h2>
+          <p style="font-size: 0.8em; color: #64748b;">Interactive & Emotional Smart Pot</p>
+          <hr style="width: 50%; border-color: var(--primary);">
+          <p style="font-size: 0.7em;">เปลี่ยนกระถางต้นไม้ให้มีบุคลิก สื่อสารผ่านหน้าจอ OLED Pixel Art และ Line Notify</p>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 2: Pain & Gain Point (20 คะแนน)</span>
+          <h3>สำรวจและวิเคราะห์ปัญหา</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>❌ Pain Point</h4>
+              <ul>
+                <li>ผู้เลี้ยงมือใหม่รดน้ำไม่ถูกวิธี ไม่รู้ความต้องการของพืช</li>
+                <li>ปล่อยให้ดินแห้งหรือรดน้ำชุ่มเกินไปจนรากเน่าตาย</li>
+                <li>ไม่มีเวลาสังเกตอาการผิดปกติของต้นส้ม</li>
+              </ul>
+            </div>
+            <div class="card green">
+              <h4>ท Gain Point</h4>
+              <ul>
+                <li>สื่อสารอารมณ์และสถานะพืชแบบ Real-time</li>
+                <li>ทำให้ผู้เลี้ยงเข้าใจพืชได้ทันทีผ่าน Emoji และข้อความกวนๆ</li>
+                <li>ช่วยกู้วิกฤตต้นไม้เฉาได้ทันเวลา</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 1: ความคิดริเริ่มสร้างสรรค์ (20 คะแนน)</span>
+          <h3>นวัตกรรมเปลี่ยนพืชให้สื่อสารได้</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💡 จุดเด่นนวัตกรรม</h4>
+              <p>หน้าจอ <b>OLED 0.96"</b> แสดงสีหน้า Pixel Art 4 อารมณ์ (ร่าเริง / หิวน้ำ / ร้อน / ร้องไห้) ตามค่าเซนเซอร์จริง</p>
+            </div>
+            <div class="card green">
+              <h4>🤖 ระบบประมวลผล</h4>
+              <p>ESP32 อ่านค่าดินและอากาศ แล้วสั่งเปิดปั๊มน้ำอัตโนมัติ พร้อมส่งข้อความภาษาพูดเข้า Line Notify เช่น <i>"มนุษย์! หิวน้ำแล้วนะ"</i></p>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <b>การเชื่อมต่อระบบ:</b> Sensors $\rightarrow$ ESP32 $\rightarrow$ OLED Display / Relay Pump / Line Notify API
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 3: การออกแบบและสิ่งแวดล้อม (20 คะแนน)</span>
+          <h3>แข็งแรง ปลอดภัย ใส่ใจสิ่งแวดล้อม</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>⚙️ การออกแบบโครงสร้าง</h4>
+              <ul>
+                <li>ประกอบสายไฟลงกล่องเคสกันน้ำ ติดขอบกระถาง 30 cm</li>
+                <li>แยกวงจรไฟแรงต่ำ (DC 5V) ปลอดภัย 100% จากไฟรั่ว</li>
+              </ul>
+            </div>
+            <div class="card green">
+              <h4>🌿 มิติด้านสิ่งแวดล้อม</h4>
+              <ul>
+                <li>จ่ายน้ำตรงเข้าโคนต้นเฉพาะเวลาที่ดินแห้ง</li>
+                <li>ลดการสิ้นเปลืองทรัพยากรน้ำได้มากกว่า 30%</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 4: ทางเศรษฐศาสตร์ (20 คะแนน)</span>
+          <h3>การวิเคราะห์จุดคุ้มทุน (Break-Even)</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💰 งบประมาณจัดทำ</h4>
+              <p>ESP32 + OLED + Sensors + Pump</p>
+              <div class="price-tag">1,650 บาท</div>
+              <p>(อยู่ในงบประมาณ 2,000 บาท)</p>
+            </div>
+            <div class="card green">
+              <h4>📈 หลักการคืนทุน</h4>
+              <ul>
+                <li>ป้องกันต้นส้มจี๊ดตาย (ต้นพร้อมกระถาง ~350 บาท)</li>
+                <li>ประหยัดค่าน้ำและปุ๋ยจากการรดน้ำแม่นยำ</li>
+                <li><b>ระยะเวลาคืนทุน: 4 - 5 เดือน</b> จากการไม่ต้องซื้อต้นไม้เปลี่ยนใหม่</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 5: การนำเสนอผลงาน (20 คะแนน)</span>
+          <h3>สรุปและสาธิตชิ้นงานจริง</h3>
+          <h4 style="color: var(--primary-dark);">"สื่อสารได้ - ปลูกง่าย - ไม่มีวันตาย"</h4>
+          <div class="highlight-box" style="text-align: center;">
+            <b>🎬 Live Demo บนเวที:</b><br>
+            ทดลองเอานิ้วแตะเซนเซอร์จำลองดินแห้ง เพื่อโชว์หน้าจอ OLED เปลี่ยนเป็นหน้าหิวน้ำ และแสดงการแจ้งเตือนเข้า Line Notify ทันที
+          </div>
+        </section>
+      </section>
+
+      <!-- ==================== GROUP 2 ==================== -->
+      <section>
+        <section>
+          <span class="badge">กลุ่มที่ 2</span>
+          <h2>ส้มจี๊ดนักเร่งดอก</h2>
+          <p style="font-size: 0.8em; color: #64748b;">Precision Water Stress for Citrus</p>
+          <hr style="width: 50%; border-color: var(--primary);">
+          <p style="font-size: 0.7em;">เทคนิคเกษตรแม่นยำ อดน้ำกระตุ้นตาดอก เพิ่มผลผลิต 2 เท่า</p>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 2: Pain & Gain Point (20 คะแนน)</span>
+          <h3>สำรวจและวิเคราะห์ปัญหา</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>❌ Pain Point</h4>
+              <ul>
+                <li>ส้มจี๊ดในกระถางได้รับน้ำสม่ำเสมอเกินไป จนไม่ออกดอก</li>
+                <li>ผลผลิตออกน้อยหรือออกไม่พร้อมกัน เก็บเกี่ยวลำบาก</li>
+              </ul>
+            </div>
+            <div class="card green">
+              <h4>ท Gain Point</h4>
+              <ul>
+                <li>กระตุ้นการติดดอกตามหลักวิชาการเกษตร</li>
+                <li>บังคับให้ส้มจี๊ดออกดอกพร้อมกันทั้งต้น ได้ผลผลิตดกขึ้น 2 เท่า</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 1: ความคิดริเริ่มสร้างสรรค์ (20 คะแนน)</span>
+          <h3>Water Stress Algorithm</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💡 นวัตกรรมอัลกอริทึม</h4>
+              <p>ระบบคุมสภาวะดินแห้งชั่วคราว (Water Stress) เพื่อส่งสัญญาณเตือนให้ต้นส้มเร่งสร้างตาดอกเพื่อขยายพันธุ์</p>
+            </div>
+            <div class="card green">
+              <h4>🤖 Dual Moisture Sensors</h4>
+              <p>ใช้เซนเซอร์ 2 ตัวฝังตื้น-ลึก เมื่อครบกำหนด อัลกอริทึมจะสั่งจ่ายน้ำผสมปุ๋ยเร่งดอกทันที</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 3: การออกแบบและสิ่งแวดล้อม (20 คะแนน)</span>
+          <h3>ระบบจ่ายน้ำแบบ Drip Irrigation</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>⚙️ การออกแบบฮาร์ดแวร์</h4>
+              <p>หัวจ่ายน้ำแบบ Drip Ring วางรอบโคนต้นส้มในกระถาง 30 cm ช่วยให้น้ำซึมลงรากแก้วได้อย่างทั่วถึง</p>
+            </div>
+            <div class="card green">
+              <h4>🌿 อนุรักษ์ทรัพยากรน้ำ</h4>
+              <p>คำนวณการจ่ายน้ำจากความชื้นจริง ประหยัดน้ำได้ถึง 40% เมื่อเทียบกับการรดน้ำด้วยสายยางทั่วไป</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 4: ทางเศรษฐศาสตร์ (20 คะแนน)</span>
+          <h3>จุดคุ้มทุนจากการเพิ่มผลผลิต</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💰 ต้นทุนระบบ</h4>
+              <div class="price-tag">1,550 บาท</div>
+            </div>
+            <div class="card green">
+              <h4>📈 การคำนวณจุดคุ้มทุน</h4>
+              <p>ผลผลิตส้มจี๊ดเพิ่มขึ้น นำไปขายสดหรือแปรรูปเป็นน้ำส้มจี๊ด สร้างรายได้เพิ่ม ~500 บาท/ฤดูกาล <b>คุ้มทุนใน 3 ฤดูกาล (~1 ปี)</b></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 5: การนำเสนอผลงาน (20 คะแนน)</span>
+          <h3>สรุปและสาธิตชิ้นงานจริง</h3>
+          <h4 style="color: var(--primary-dark);">"เร่งดอกแม่นยำ - เพิ่มผลผลิต - คุ้มค่าเกษตรกร"</h4>
+          <div class="highlight-box" style="text-align: center;">
+            <b>🎬 Live Demo บนเวที:</b> แสดงกราฟความชื้นดินย้อนหลัง และสั่งเปิด-ปิดโหมด Water Stress ผ่าน Mobile App
+          </div>
+        </section>
+      </section>
+
+      <!-- ==================== GROUP 3 ==================== -->
+      <section>
+        <section>
+          <span class="badge">กลุ่มที่ 3</span>
+          <h2>ส้มจี๊ดตาคม AI</h2>
+          <p style="font-size: 0.8em; color: #64748b;">ESP32-CAM Fruit & Health Inspector</p>
+          <hr style="width: 50%; border-color: var(--primary);">
+          <p style="font-size: 0.7em;">Computer Vision สแกนโรคพืช และสแกนระดับความสุกผลส้ม</p>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 2: Pain & Gain Point (20 คะแนน)</span>
+          <h3>สำรวจและวิเคราะห์ปัญหา</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>❌ Pain Point</h4>
+              <ul>
+                <li>ผู้เลี้ยงไม่มีเวลาเดินสำรวจ มองไม่เห็นเพลี้ยหรือหนอนส้ม</li>
+                <li>ประเมินความสุกส้มจี๊ดไม่ถูก ทำให้เก็บเกี่ยวผิดเวลา</li>
+              </ul>
+            </div>
+            <div class="card green">
+              <h4>ท Gain Point</h4>
+              <ul>
+                <li>ตรวจจับโรคและแมลงล่วงหน้าก่อนระบาดทั้งต้น</li>
+                <li>บอกเปอร์เซ็นต์ความสุกของผลส้ม แจ้งเตือนเก็บเกี่ยวเข้า Line</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 1: ความคิดริเริ่มสร้างสรรค์ (20 คะแนน)</span>
+          <h3>AI Computer Vision</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💡 ESP32-CAM Integration</h4>
+              <p>ติดตั้งกล้องส่องทรงพุ่มส้มจี๊ด สแกนวิเคราะห์สีผิวส้ม ($สีเขียว \rightarrow สีส้ม$) และตรวจหาจุดแคงเกอร์บนใบ</p>
+            </div>
+            <div class="card green">
+              <h4>🤖 Real-time Alert</h4>
+              <p>กดสั่งถ่ายรูปจากสมาร์ทโฟน AI จะประมวลผลแล้วส่งภาพพร้อมผลวิเคราะห์เข้า Line Notify ทันที</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 3: การออกแบบและสิ่งแวดล้อม (20 คะแนน)</span>
+          <h3>แขนกล้องปรับระดับได้</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>⚙️ การออกแบบ</h4>
+              <p>แขนยึดกล้องปรับหมุนได้รอบกระถาง 30 cm พร้อมไฟ LED Flash เพิ่มความสว่าง ปลอดภัยด้วยไฟ DC 5V</p>
+            </div>
+            <div class="card green">
+              <h4>🌿 ลดการใช้สารเคมี</h4>
+              <p>ตรวจพบศัตรูพืชได้ตั้งแต่ระยะเริ่มต้น ทำให้กำจัดเฉพาะจุดได้ ไม่ต้องฉีดพ่นสารเคมีทั้งต้น</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 4: ทางเศรษฐศาสตร์ (20 คะแนน)</span>
+          <h3>คุ้มค่าด้วยการป้องกันความเสียหาย</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💰 ต้นทุนระบบ</h4>
+              <div class="price-tag">1,700 บาท</div>
+            </div>
+            <div class="card green">
+              <h4>📈 การคำนวณจุดคุ้มทุน</h4>
+              <p>ป้องกันส้มจี๊ดตายยกต้นจากโรคร้าย และลดค่าใช้จ่ายสารเคมีรักษาพืช <b>คุ้มทุนภายใน 6 เดือน</b></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 5: การนำเสนอผลงาน (20 คะแนน)</span>
+          <h3>สรุปและสาธิตชิ้นงานจริง</h3>
+          <h4 style="color: var(--primary-dark);">"ตาคมด้วย AI - สแกนโรครวดเร็ว - รู้ระดับความสุก"</h4>
+          <div class="highlight-box" style="text-align: center;">
+            <b>🎬 Live Demo บนเวที:</b> กดสั่งถ่ายรูปส้มจี๊ดสดๆ แล้วโชว์ผลการวิเคราะห์ความสุกภาพส้มขึ้นหน้าจอทันที
+          </div>
+        </section>
+      </section>
+
+      <!-- ==================== GROUP 4 ==================== -->
+      <section>
+        <section>
+          <span class="badge">กลุ่มที่ 4</span>
+          <h2>ส้มจี๊ดไม่ง้อแดด</h2>
+          <p style="font-size: 0.8em; color: #64748b;">Smart Indoor Grow Light Pot</p>
+          <hr style="width: 50%; border-color: var(--primary);">
+          <p style="font-size: 0.7em;">ระบบคำนวณแสงสะสม ชดเชยด้วยไฟสังเคราะห์แสงสำหรับปลูกในร่ม</p>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 2: Pain & Gain Point (20 คะแนน)</span>
+          <h3>สำรวจและวิเคราะห์ปัญหา</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>❌ Pain Point</h4>
+              <ul>
+                <li>ปลูกส้มจี๊ดในคอนโด/ระเบียงอับแสง ได้แดดไม่ถึง 6 ชม./วัน</li>
+                <li>ต้นส้มสังเคราะห์แสงไม่ได้ ใบร่วง ไม่ติดดอกออกผล</li>
+              </ul>
+            </div>
+            <div class="card green">
+              <h4>ท Gain Point</h4>
+              <ul>
+                <li>ช่วยให้คนเมืองปลูกส้มจี๊ดกินผลในห้องได้ 100%</li>
+                <li>เติมพลังงานแสงอาทิตย์เทียมตามความต้องการของพืชอย่างพอดี</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 1: ความคิดริเริ่มสร้างสรรค์ (20 คะแนน)</span>
+          <h3>Smart Grow Light System</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💡 Lux Sensor Integration</h4>
+              <p>ใช้เซนเซอร์ BH1750 คำนวณปริมาณแสงสะสม (DLI) ที่ส้มจี๊ดได้รับในแต่ละวัน</p>
+            </div>
+            <div class="card green">
+              <h4>🤖 Full Spectrum LED</h4>
+              <p>หากแสงแดดธรรมชาติไม่พอ ESP32 จะสั่งเปิดไฟสังเคราะห์แสง (Grow Light) เติมให้จนครบเกณฑ์</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 3: การออกแบบและสิ่งแวดล้อม (20 คะแนน)</span>
+          <h3>ดีไซน์มินิมอล ประหยัดไฟ</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>⚙️ การออกแบบ</h4>
+              <p>โคมไฟทรงโค้งครอบทรงพุ่มส้มจี๊ดขนาด 30 cm สวยงามกลมกลืนกับเฟอร์นิเจอร์ในห้องพัก</p>
+            </div>
+            <div class="card green">
+              <h4>🌿 ประหยัดพลังงาน</h4>
+              <p>เปิดไฟ Grow Light เฉพาะช่วงที่แสงแดดไม่พอ ไม่เปิดค้างทิ้งไว้ ประหยัดค่าไฟได้ 50%</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 4: ทางเศรษฐศาสตร์ (20 คะแนน)</span>
+          <h3>จุดคุ้มทุนสำหรับคนเมือง</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💰 ต้นทุนระบบ</h4>
+              <div class="price-tag">1,600 บาท</div>
+            </div>
+            <div class="card green">
+              <h4>📈 การคำนวณจุดคุ้มทุน</h4>
+              <p>ไม่ต้องเสียเงินย้ายห้อง/ซื้ออุปกรณ์เสริมเพิ่ม และประหยัดค่าซื้อผลส้มรับประทาน <b>คุ้มทุนภายใน 6 - 8 เดือน</b></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 5: การนำเสนอผลงาน (20 คะแนน)</span>
+          <h3>สรุปและสาธิตชิ้นงานจริง</h3>
+          <h4 style="color: var(--primary-dark);">"ปลูกได้ทุกที่ - เติมแสงอัตโนมัติ - ตอบโจทย์คนเมือง"</h4>
+          <div class="highlight-box" style="text-align: center;">
+            <b>🎬 Live Demo บนเวที:</b> เอามือบังเซนเซอร์วัดแสงจำลองห้องมืด โชว์ระบบไฟ Grow Light เปิดสว่างทันที
+          </div>
+        </section>
+      </section>
+
+      <!-- ==================== GROUP 5 ==================== -->
+      <section>
+        <section>
+          <span class="badge">กลุ่มที่ 5</span>
+          <h2>ส้มจี๊ดประหยัดพลังงาน</h2>
+          <p style="font-size: 0.8em; color: #64748b;">Solar & Standalone Power Pot</p>
+          <hr style="width: 50%; border-color: var(--primary);">
+          <p style="font-size: 0.7em;">กระถางอัจฉริยะพลังงานสะอาด 100% ไร้สายไฟ ตั้งกลางแจ้งได้ทันที</p>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 2: Pain & Gain Point (20 คะแนน)</span>
+          <h3>สำรวจและวิเคราะห์ปัญหา</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>❌ Pain Point</h4>
+              <ul>
+                <li>การลากสายไฟรดน้ำต้นไม้นอกบ้านเสี่ยงไฟรั่วเมื่อฝนตก</li>
+                <li>สายไฟเกะกะ ย้ายกระถางลำบาก และเพิ่มค่าไฟบ้าน</li>
+              </ul>
+            </div>
+            <div class="card green">
+              <h4>ท Gain Point</h4>
+              <ul>
+                <li>กระถาง Standalone วางตำแหน่งไหนก็ได้ตามต้องการ</li>
+                <li>ปลอดภัย 100% ไร้สายไฟต่อภายนอก ประหยัดค่าไฟฟ้า</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 1: ความคิดริเริ่มสร้างสรรค์ (20 คะแนน)</span>
+          <h3>Solar Power & Deep Sleep</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💡 Solar Harvesting</h4>
+              <p>ผลิตไฟฟ้าจากแผงโซลาร์เซลล์ ชาร์จเก็บลงถ่าน 18650 Li-ion ผ่านวงจร TP4056</p>
+            </div>
+            <div class="card green">
+              <h4>🤖 Deep Sleep Algorithm</h4>
+              <p>บอร์ด ESP32 เข้าสู่โหมดจำศีล ตื่นมาอ่านค่าและรดน้ำเฉพาะช่วงเวลาที่จำเป็น ทำให้ใช้น้ำมันไฟน้อยมาก</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 3: การออกแบบและสิ่งแวดล้อม (20 คะแนน)</span>
+          <h3>IP65 Waterproof & Green Energy</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>⚙️ การออกแบบ</h4>
+              <p>กล่องเคสกันน้ำ IP65 แผงโซลาร์ปรับองศารับแสงได้ 15-45 องศา ติดบนขอบกระถาง 30 cm</p>
+            </div>
+            <div class="card green">
+              <h4>🌿 พลังงานสะอาด (คะแนนพิเศษ)</h4>
+              <p>พึ่งพาพลังงานหมุนเวียน 100% ช่วยลดการปล่อยคาร์บอนจากการใช้ไฟฟ้าบ้าน</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 4: ทางเศรษฐศาสตร์ (20 คะแนน)</span>
+          <h3>จุดคุ้มทุนจากการประหยัดพลังงาน</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💰 ต้นทุนระบบ</h4>
+              <div class="price-tag">1,750 บาท</div>
+            </div>
+            <div class="card green">
+              <h4>📈 การคำนวณจุดคุ้มทุน</h4>
+              <p>ค่าไฟฟ้า $0$ บาท ประหยัดค่าติดตั้งเดินปลั๊กไฟนอกบ้าน (~1,500 บาท) <b>คุ้มทุนทันทีตั้งแต่ติดตั้งใช้งาน</b></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 5: การนำเสนอผลงาน (20 คะแนน)</span>
+          <h3>สรุปและสาธิตชิ้นงานจริง</h3>
+          <h4 style="color: var(--primary-dark);">"พลังงานสะอาด - ไร้สายไฟ - วางได้ทุกที่"</h4>
+          <div class="highlight-box" style="text-align: center;">
+            <b>🎬 Live Demo บนเวที:</b> แสดง Dashboard สถานะ % แบตเตอรี่ และแรงดันไฟที่สร้างได้จากโซลาร์เซลล์แบบ Real-time
+          </div>
+        </section>
+      </section>
+
+      <!-- ==================== GROUP 6 ==================== -->
+      <section>
+        <section>
+          <span class="badge">กลุ่มที่ 6</span>
+          <h2>ส้มจี๊ดกินอาหารคลีน</h2>
+          <p style="font-size: 0.8em; color: #64748b;">Soil Health & Analytics Tracker</p>
+          <hr style="width: 50%; border-color: var(--primary);">
+          <p style="font-size: 0.7em;">ระบบติดตามสุขภาพดินและวิเคราะห์ธาตุอาหารระยะยาว</p>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 2: Pain & Gain Point (20 คะแนน)</span>
+          <h3>สำรวจและวิเคราะห์ปัญหา</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>❌ Pain Point</h4>
+              <ul>
+                <li>ดินในกระถางแน่น ดินเค็ม หรือปุ๋ยตกค้างจากการใส่ปุ๋ยผิดวิธี</li>
+                <li>ใส่ปุ๋ยตามความรู้สึก ทำให้รากเน่าและส้มจี๊ดใบเหลืองตาย</li>
+              </ul>
+            </div>
+            <div class="card green">
+              <h4>ท Gain Point</h4>
+              <ul>
+                <li>รู้สุขภาพดินที่แท้จริง ($pH$, ค่าความเค็ม, ธาตุอาหาร)</li>
+                <li>ใส่ปุ๋ยและปรับสภาพดินได้ตรงตามความต้องการของส้มจี๊ด</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 1: ความคิดริเริ่มสร้างสรรค์ (20 คะแนน)</span>
+          <h3>Soil Data Analytics</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💡 Soil Health Probes</h4>
+              <p>ฝังแท่งเซนเซอร์วัดสภาพดิน บันทึกข้อมูลสุขภาพดินลงบน Cloud (Google Sheets / Blynk)</p>
+            </div>
+            <div class="card green">
+              <h4>🤖 Smart Fertilizer Alert</h4>
+              <p>วิเคราะห์รอบการใส่ปุ๋ย แจ้งเตือนสูตรปุ๋ยที่เหมาะสมตามช่วงอายุเจริญเติบโตของส้มจี๊ด</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 3: การออกแบบและสิ่งแวดล้อม (20 คะแนน)</span>
+          <h3>แท่งวัด Stainless ไม่ตกค้าง</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>⚙️ การออกแบบ</h4>
+              <p>แท่งวัด Stainless ทนทาน ปักลึกในชั้นดินกระถาง 30 cm กล่องควบคุมกันน้ำสายไฟเป็นระเบียบ</p>
+            </div>
+            <div class="card green">
+              <h4>🌿 ลดการใช้เคมีเกินจำเป็น</h4>
+              <p>ป้องกันการใส่ปุ๋ยมากเกินไป ช่วยรักษาสภาพดินและลดเคมีชะล้างลงสิ่งแวดล้อม</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 4: ทางเศรษฐศาสตร์ (20 คะแนน)</span>
+          <h3>จุดคุ้มทุนจากการลดปุ๋ยส่วนเกิน</h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>💰 ต้นทุนระบบ</h4>
+              <div class="price-tag">1,600 บาท</div>
+            </div>
+            <div class="card green">
+              <h4>📈 การคำนวณจุดคุ้มทุน</h4>
+              <p>ประหยัดค่าปุ๋ยจากการซึมทิ้งได้ 50% (~300 บาท/ปี) และยืดอายุการใช้งานดิน <b>คุ้มทุนใน 8 - 10 เดือน</b></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="badge">เกณฑ์ข้อ 5: การนำเสนอผลงาน (20 คะแนน)</span>
+          <h3>สรุปและสาธิตชิ้นงานจริง</h3>
+          <h4 style="color: var(--primary-dark);">"ดินสมบูรณ์ - ใส่ปุ๋ยแม่นยำ - วิเคราะห์ด้วยข้อมูล"</h4>
+          <div class="highlight-box" style="text-align: center;">
+            <b>🎬 Live Demo บนเวที:</b> แสดงตารางและกราฟวิเคราะห์สุขภาพดินย้อนหลังผ่าน Dashboard บนสมาร์ทโฟน
+          </div>
+        </section>
+      </section>
+
+      <!-- ==================== END SLIDE ==================== -->
+      <section>
+        <h2>ขอบคุณครับ / ค่ะ</h2>
+        <p style="font-size: 0.8em; color: #64748b;">พร้อมรับคำแนะนำและตอบข้อซักถามจากท่านกรรมการ</p>
+        <div style="margin-top: 30px;">
+          <button class="nav-btn" style="padding: 10px 20px; font-size: 16px;" onclick="Reveal.slide(0)">กลับสู่หน้าแรก</button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      transition: 'slide'
+    });
+
+    // Update Nav Active class on slide change
+    Reveal.on('slidechanged', event => {
+      const index = event.indexh;
+      const btns = document.querySelectorAll('.nav-btn');
+      btns.forEach(b => b.classList.remove('active'));
+      
+      if(index === 0) btns[0].classList.add('active');
+      else if(index >= 1 && index <= 6) btns[1].classList.add('active');
+      else if(index >= 7 && index <= 12) btns[2].classList.add('active');
+      else if(index >= 13 && index <= 18) btns[3].classList.add('active');
+      else if(index >= 19 && index <= 24) btns[4].classList.add('active');
+      else if(index >= 25 && index <= 30) btns[5].classList.add('active');
+      else if(index >= 31 && index <= 36) btns[6].classList.add('active');
+    });
+  </script>
+</body>
+</html>
